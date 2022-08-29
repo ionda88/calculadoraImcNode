@@ -31,7 +31,9 @@ app.post('/imc', (req, res) => {
     }else if(result < 35){
         classificacao = 'com obesidade grau 1';
     }else if(result < 40){
-        classificacao = 'com o peso ideal';
+        classificacao = 'com obesidade grau 2';
+    } else {
+        classificacao = 'com obesidade grau 3';
     }
     res.send(`<div class="card" style="  position: absolute;
   left: 50%;
